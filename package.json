@@ -8,12 +8,17 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.54.2",
     "@types/crypto-js": "^4.2.2",
     "@types/node": "^24.2.1"
   },
   "dependencies": {
     "crypto-js": "^4.2.0",
-    "dotenv": "^17.2.1"
+    "csv-writer": "^1.6.0",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^17.2.1",
+    "moment-timezone": "^0.6.0",
+    "winston": "^3.17.0"
   }
 }

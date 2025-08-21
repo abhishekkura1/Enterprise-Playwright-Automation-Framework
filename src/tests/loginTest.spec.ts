@@ -2,6 +2,7 @@ import {test} from "@playwright/test";
 import LoginPage from "../pages/LoginPage";
 import {decrypt,encrypt} from "../utils/CryptojsUtil";
 import {encryptEnvFile,decryptEnvFile} from "../utils/EncryptEnvFile";
+import logger from "../utils/LoggerUtil";
 
 test("test",async({page})=> //test.skip("test",async({page})=>
 {
@@ -13,9 +14,10 @@ test("test",async({page})=> //test.skip("test",async({page})=>
     await loginPage.fillPassword(process.env.password!);
     const homePage=await loginPage.clickLoginButton();
     await homePage.expectSalesTitleToBeVisible();
+    logger.info("Test for login is completed")
 });
 
-test("Sample env test",async({page})=>
+test.skip("Sample env test",async({page})=>
 {
     /*console.log(process.env.NODE_ENV);
     console.log(process.env.userid);
